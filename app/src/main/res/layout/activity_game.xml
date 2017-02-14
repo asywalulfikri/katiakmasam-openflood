@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-4914903732265878/7834648147">
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/outer_layout_padding"
+        android:background="@drawable/background_box"
+        android:layout_margin="@dimen/box_margins">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stepsTextView"
+                android:textSize="@dimen/large_text_size" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/info"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:id="@+id/infoButton" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gear_settings"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:id="@+id/settingsButton" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/new_random"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:id="@+id/newGameButton" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.gunshippenguin.openflood.FloodView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/floodView"
+            android:layout_weight="8"
+            android:layout_margin="@dimen/box_margins"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/buttonLayout"
+            android:layout_weight="1.5">
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
